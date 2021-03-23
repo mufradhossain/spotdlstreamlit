@@ -19,8 +19,8 @@ def main():
             for file in files:  
                 if file.endswith('.mp3'): 
                     
-                    zipObj.write(str(file))
-                    os.remove(str(file))
+                    zipObj.write(root+"/"+str(file))
+                    os.remove(root+"/"+str(file))
         zipObj.close()
         with open("music.zip", "rb") as f:
             bytes = f.read()
